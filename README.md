@@ -34,4 +34,5 @@ grep -lrIZ "co.nttcom.business.metasys.sg.domain.model.redefine.SgtSsg0421sRedef
 delete all line starting with a pattern
 ```
 find . -name "*.java" | xargs gsed -i -r '/^(\s|\t)*\/\/##/d'
+find . -name "*.java" -exec sed -i -r '/^(\s|\t)*\/\/##/d' {} +
 ```
