@@ -27,3 +27,11 @@ remove //##//xxxxxxx
 ↓
 <empty>
 ```
+delete all java file containing a certain string
+```
+grep -lrIZ "co.nttcom.business.metasys.sg.domain.model.redefine.SgtSsg0421sRedefineDto" --include \*.java . | xargs rm
+```
+delete all line starting with a pattern
+```
+find . -name "*.java" | xargs gsed -i -r '/^(\s|\t)*\/\/##/d'
+```
