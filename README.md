@@ -11,6 +11,10 @@ for files in ./**/*.sql; do   iconv -f sjis -t UTF-8 "$files" > "convert/$(basen
 ↓
 $1//##$2
 ```
+find **Aaaaa Bbbbb** (exclude **// TODO Aaaaa**)
+```
+^[^//<]+[A-Z]\w*\s[A-Z]
+```
 
 ```
 * [xx] → * <p>[xx]</p>
